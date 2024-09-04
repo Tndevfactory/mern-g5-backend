@@ -12,6 +12,7 @@ const getProducts = asyncHandler(async (req, res) => {
 });
 
 const createProduct = asyncHandler(async (req, res) => {
+  console.log("changement branch chawki");
   const { designation, prix, couleur, taille, description } = req.body;
   const product = await Product.create(req.body);
   res.status(200).json({ success: true, product });
